@@ -11,13 +11,11 @@ rect = function(dimensions) {
         lower_left,
         close,
         path_string;
-    required = ['height', 'width'];
-    required.forEach(function(property) {
-        if (typeof dimensions[property] !== 'number') {
-            console.error('rectangle path generator requires ' + property + ' property');
-            return;
-        }
-    });
+    required = dimensions.height > 0 && dimensions.width > 0;
+    if (! required) {
+        console.error('rectangle path generator requires both height and width properties');
+        return;
+    }
     x_offset = dimensions.x || 0;
     y_offset = dimensions.y || 0;
     upper_left = 'M ' + x_offset + ',' + y_offset;
