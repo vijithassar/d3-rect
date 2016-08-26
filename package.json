@@ -1,0 +1,32 @@
+{
+  "name": "d3-rect",
+  "version": "0.0.1",
+  "description": "draw rectangles with paths",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "svg",
+    "shape"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-rect.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/vijithassar/d3-rect",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vijithassar/d3-rect.git"
+  },
+  "scripts": {
+    "lint": "eslint --config eslintrc.json src/*.js && eslint --config eslintrc.json test/*.js",
+    "pretest": "rm -rf build && mkdir build && rollup -g d3-rect:d3 -f umd -n d3 -o build/d3-rect.js -- index.js && npm run lint",
+    "test": "tape 'test/**/*-test.js'",
+    "prepublish": "npm run test && uglifyjs build/d3-rect.js -c -m -o build/d3-rect.min.js",
+    "postpublish": "zip -j build/d3-rect.zip -- LICENSE README.md build/d3-rect.js build/d3-rect.min.js"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "rollup": "0.27",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}
