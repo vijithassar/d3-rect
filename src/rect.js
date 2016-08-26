@@ -3,6 +3,8 @@ var rect;
 
 rect = function(dimensions) {
     var required,
+        x_offset,
+        y_offset,
         upper_left,
         upper_right,
         lower_right,
@@ -16,7 +18,9 @@ rect = function(dimensions) {
             return;
         }
     });
-    upper_left = 'M 0,0';
+    x_offset = dimensions.x || 0;
+    y_offset = dimensions.y || 0;
+    upper_left = 'M ' + x_offset + ',' + y_offset;
     upper_right = 'l ' + dimensions.width + ',0';
     lower_right = 'l 0,' + dimensions.height;
     lower_left = 'l ' + dimensions.width * -1 + ',0';
