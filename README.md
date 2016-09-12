@@ -2,6 +2,8 @@
 
 draw rectangles with path elements
 
+[demonstration](https://bl.ocks.org/vijithassar/722f44dc4e5f892b33d5074f1a5bd99a)
+
 ## Overview
 
 [d3-shape](https://github.com/d3/d3-shape/) provides handy tools which help with drawing many common shapes, but curiously enough, rectangles are not among them. In most situations it is sufficient to use a  [rect element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect), but rect elements do not have path strings, and thus cannot be interpolated into a different shape. This plugin is a tiny helper which draws your rectangles using [path elements](https://www.w3.org/TR/SVG/paths.html) so they can be [animated](https://github.com/d3/d3-transition).
