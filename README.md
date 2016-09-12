@@ -10,7 +10,7 @@ draw rectangles with path elements
 
 If you use NPM, `npm install d3-rect`. Otherwise, download the [latest release](https://github.com/vijithassar/d3-rect/releases/latest).
 
-## API
+## Instructions
 
 **d3.rect** is a function which returns a path string when passed an object containing x, y, height, and width properties.
 
