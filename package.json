@@ -1,6 +1,6 @@
 {
   "name": "d3-rect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Vijith Assar",
   "description": "draw rectangles with paths",
   "keywords": [
@@ -28,6 +28,6 @@
     "eslint": "^3.3.1",
     "rollup": "0.27",
     "tape": "4",
-    "uglify-js": "2"
+    "uglify-js": "2.6"
   }
 }
